@@ -1,0 +1,33 @@
+.aboutme-dis{
+    a{
+        img{
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+.aboutme-img{
+    img{
+        width: 450px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 976px){
+    #about-me{
+        .container{
+            text-align: center;
+        }
+    }
+    .aboutme-dis{
+        p{
+            padding: 0 30px;
+        }
+    }
+}
+#about-me{
+    background-image: url("./images/infinite.png"),url("./images/infinite2.png");
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+    
+}

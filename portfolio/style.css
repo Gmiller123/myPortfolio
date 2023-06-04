@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@500&family=Open+Sans:wght@600&display=swap");
+.container-fluid {
+  background-image: url("./images/hero.jpeg");
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+nav .container .nav-logo {
+  color: #000;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+nav .container .nav-logo img {
+  height: 40px;
+  width: 50px;
+}
+nav .container .nav-logo span {
+  margin-top: px;
+}
+nav .container .nav-logo .logo-color {
+  color: #F75022;
+}
+
+.collapse ul {
+  padding: 0;
+  margin: 0;
+}
+.collapse ul li {
+  padding: 0 10px;
+}
+.collapse ul li a {
+  color: #000;
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+.collapse ul li a:hover {
+  color: #F75022;
+  transition: 0.4s;
+}
+.collapse ul li a.activee {
+  color: #F75022;
+}
+
+@media screen and (max-width: 993px) {
+  .container-fluid {
+    height: 100%;
+  }
+  .container.hero-section {
+    padding: 0;
+  }
+  nav .container {
+    justify-content: space-around;
+  }
+}
+.nav .container .nav-logo span {
+  margin-top: 100px;
+}
+
+.animate {
+  /* Add your desired animation styles here */
+  /* Example animation: */
+  transition: background-color 0.5s, color 0.5s;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  padding: 0 80px;
+}
+
+section {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.container.hero-section {
+  padding-top: 120px;
+}
+.container.hero-section .row .hero-description h2 {
+  font-family: "Jost", sans-serif;
+  font-size: 25px;
+  color: #F75022;
+  margin-top: 10px;
+}
+.container.hero-section .row .hero-description h1 {
+  font-family: "Jost", sans-serif;
+  font-size: 3.5rem;
+}
+.container.hero-section .row .hero-description h3 {
+  color: #1cbe59;
+  padding-bottom: 20px;
+}
+.container.hero-section .row .hero-description p {
+  color: #6f6b80;
+  font-size: 16px;
+  padding-bottom: 20px;
+}
+.container.hero-section .row .hero-img img {
+  width: 350px;
+  height: auto;
+}
+
+.btn {
+  --background-color: #F75022;
+  --accent-color: #f3efef;
+  background-color: var(--background-color);
+  color: #fff;
+  padding: 0.6em 1.5em;
+  outline: 2px solid #F75022;
+  position: relative;
+  cursor: pointer;
+}
+
+.btn.btn-background-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-color: var(--accent-color);
+  transition: transform 300ms ease-in-out;
+  transform: scaleY(0) translateY(-100%);
+  transform-origin: top;
+}
+
+.btn.btn-background-slide:hover::before,
+.btn.btn-background-slide:focus::before {
+  transform: scaleY(1) translateY(0%);
+}
+
+.btn.btn-background-slide {
+  transition: transform 300ms ease-in-out, color 300ms ease-in-out; /* Add color transition */
+  z-index: 1;
+}
+
+.btn.btn-background-slide:hover,
+.btn.btn-background-slide:focus {
+  color: #000;
+}
+
+.btn.btn-background-slide:hover::before,
+.btn.btn-background-slide:focus::before,
+.btn.btn-background-slide:hover,
+.btn.btn-background-slide:focus {
+  transition-delay: 0ms; /* Reset transition delay for simultaneous effect */
+}
+
+@media (max-width: 991.98px) {
+  .order-lg-1 {
+    order: 2;
+  }
+  .order-lg-2 {
+    order: 1;
+  }
+}
+@media screen and (max-width: 968px) {
+  .container {
+    padding: 0;
+  }
+  .container.hero-section {
+    padding-top: 30px; /* Adjust padding for smaller screens */
+    text-align: center;
+  }
+  .row .hero-description h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 769px) {
+  .row .hero-description h1 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 495px) {
+  .row .hero-description h1 {
+    font-size: 1.5rem;
+  }
+}
+section#my-skills {
+  padding: 100px 0;
+  background-image: url(./images/skillsbg.png), url(./images/skillsbtnbg.png);
+  background-position: top right, bottom left;
+  background-repeat: no-repeat;
+  animation: zoom-in 3s ease-in-out forwards;
+  text-align: center;
+}
+
+@keyframes zoom-in {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.logo-color {
+  color: #F75022;
+}
+
+svg {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.skill-container {
+  border: 2px solid #DEDEDE;
+  border-radius: 12px;
+  background-color: #FFFFFF;
+  box-shadow: 18px 0px 87px rgba(10, 15, 70, 0.07);
+  padding: 30px 0;
+  width: 300px;
+}
+
+.skill-holder .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+.aboutme-dis a img {
+  width: 30px;
+  height: 30px;
+}
+
+.aboutme-img img {
+  width: 450px;
+  height: auto;
+}
+
+@media screen and (max-width: 976px) {
+  #about-me .container {
+    text-align: center;
+  }
+  .aboutme-dis p {
+    padding: 0 30px;
+  }
+}
+#about-me {
+  background-image: url("./images/infinite.png"), url("./images/infinite2.png");
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+}
+
+.filter-button {
+  padding: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  background-color: lightgray;
+}
+.filter-button:hover {
+  color: #f75023;
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+  width: 33.3333333333%;
+  height: auto;
+  border-radius: 12px;
+  padding-left: 25px;
+  margin-bottom: 25px;
+  outline: none;
+  border: none;
+}
+.item .card {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+}
+.item .card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.item img {
+  display: inline-block;
+  width: 30%;
+  height: auto;
+}
+
+#portfolio h3 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  color: #f75023;
+  font-family: "Jost", sans-serif;
+  margin-bottom: 6px;
+}
+#portfolio h1 {
+  font-size: 35px;
+  margin-bottom: 16px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #000;
+  text-align: center;
+}
+#portfolio .container #filter-buttons {
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  flex-wrap: wrap;
+}
+#portfolio .container #filter-buttons .filter-button {
+  padding: 10px 20px;
+  background-color: #fff;
+  letter-spacing: 1.5px;
+  display: inline-block;
+  margin: 10px 10px;
+}
+#portfolio .container #filter-buttons .filter-button:hover {
+  border: 2px solid #f75023;
+}
+#portfolio .container #filter-buttons .active {
+  color: #f75023;
+  border: 2px solid #f75023;
+}
+
+#isotope-container {
+  height: 500px !important;
+}
+
+@media screen and (max-width: 1040px) {
+  .item {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .item {
+    width: 100%;
+    padding-left: 0;
+  }
+  #portfolio .container #filter-buttons .filter-button {
+    padding: 5px 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  footer.justify-content-between {
+    justify-content: center !important;
+  }
+}
+#footer {
+  background-color: #f2f5fb;
+  padding: 0;
+  margin: 0;
+}
+
+#contact-me .container {
+  width: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+}
+#contact-me .container p {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+form input.btn {
+  color: #fff;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  #contact-me .container {
+    width: 100%;
+    padding: 20px;
+  }
+  #contact-me .container h1 {
+    margin-bottom: 2rem;
+  }
+  #contact-me .container p.contact-para {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

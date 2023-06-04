@@ -1,0 +1,87 @@
+.container-fluid{
+    background-image: url("./images/hero.jpeg");
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav{
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    
+    .container{
+        
+      
+        .nav-logo{
+            color: #000;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 5px;
+                img{
+                    height: 40px;
+                    width: 50px;
+                }
+                span{
+                    margin-top: px;
+                }
+            .logo-color{
+                color: #F75022;
+            }
+        }
+    }
+}
+.collapse{
+    ul{
+        padding: 0;
+        margin: 0;
+        li{
+            padding: 0 10px;
+            a{
+                color: #000;
+                font-family: 'Jost', sans-serif;
+                font-size: 16px;
+                cursor: pointer;
+                
+                
+                &:hover{
+                    color: #F75022;
+                    transition: 0.4s;
+                }
+            }
+            a.activee{
+                color: #F75022;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 993px){
+    .container-fluid{
+        height: 100%
+    }
+    .container.hero-section {
+        padding: 0;
+    }
+    nav{
+        .container{
+            justify-content: space-around;
+        }
+    }
+   
+}
+.nav .container .nav-logo span {
+    margin-top: 100px;
+}
+.animate {
+    /* Add your desired animation styles here */
+    // background-color: #fff;
+    // color: #fff;
+    /* Example animation: */
+    transition: background-color 0.5s, color 0.5s;
+    background-color: #fff;
+    // padding: 20px 0px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.1);
+  }
+  

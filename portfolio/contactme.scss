@@ -1,0 +1,38 @@
+#contact-me{
+    .container{
+        width: 50%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 50px;
+        h1{
+
+        }
+        p{
+            width: 90%;
+            margin: 2rem auto;
+            
+        }
+
+    }
+}
+form{
+    
+    input.btn{   
+     color: #fff;
+     width: 100%;
+     margin: 0 auto;   
+    }
+}
+@media (max-width: 767px){
+    #contact-me{
+        .container{
+            width: 100%;
+            padding: 20px;
+            h1{
+                margin-bottom: 2rem;
+            }
+            p.contact-para{
+                display: none;
+            }
+        }
+    }
+}
